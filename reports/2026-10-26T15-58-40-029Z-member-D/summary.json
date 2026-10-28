@@ -1,0 +1,94 @@
+{
+  "planned": 9,
+  "executed": 9,
+  "passed": 9,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "reporterNonPass": 0,
+  "startTime": "2026-10-26T15:58:47.939Z",
+  "endTime": "2026-10-26T16:00:14.836Z",
+  "scenarios": [
+    {
+      "fixture": "T010 Account registration",
+      "scenario": "T010-S1",
+      "name": "T010-S1 Register a new account",
+      "status": "passed",
+      "errors": [],
+      "screenshot": "outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T010-S1.png",
+      "durationMs": 10485
+    },
+    {
+      "fixture": "T010 Account registration",
+      "scenario": "T010-S2",
+      "name": "T010-S2 Reject missing first name",
+      "status": "passed",
+      "errors": [],
+      "screenshot": "outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T010-S2.png",
+      "durationMs": 8538
+    },
+    {
+      "fixture": "T010 Account registration",
+      "scenario": "T010-S3",
+      "name": "T010-S3 Reject mismatched password confirmation",
+      "status": "passed",
+      "errors": [],
+      "screenshot": "outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T010-S3.png",
+      "durationMs": 8306
+    },
+    {
+      "fixture": "T011 Account login",
+      "scenario": "T011-S1",
+      "name": "T011-S1 Accept valid credentials",
+      "status": "passed",
+      "errors": [],
+      "screenshot": "outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T011-S1.png",
+      "durationMs": 11671
+    },
+    {
+      "fixture": "T011 Account login",
+      "scenario": "T011-S2",
+      "name": "T011-S2 Reject an incorrect password",
+      "status": "passed",
+      "errors": [],
+      "screenshot": "outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T011-S2.png",
+      "durationMs": 10311
+    },
+    {
+      "fixture": "T011 Account login",
+      "scenario": "T011-S3",
+      "name": "T011-S3 Reject blank credentials",
+      "status": "passed",
+      "errors": [],
+      "screenshot": "outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T011-S3.png",
+      "durationMs": 4107
+    },
+    {
+      "fixture": "T012 Account logout",
+      "scenario": "T012-S1",
+      "name": "T012-S1 End an authenticated session",
+      "status": "passed",
+      "errors": [],
+      "screenshot": "outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T012-S1.png",
+      "durationMs": 10565
+    },
+    {
+      "fixture": "T012 Account logout",
+      "scenario": "T012-S2",
+      "name": "T012-S2 Deny protected profile access after logout",
+      "status": "passed",
+      "errors": [],
+      "screenshot": "outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T012-S2.png",
+      "durationMs": 7878
+    },
+    {
+      "fixture": "T012 Account logout",
+      "scenario": "T012-S3",
+      "name": "T012-S3 Allow a new login and another logout",
+      "status": "passed",
+      "errors": [],
+      "screenshot": "outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T012-S3.png",
+      "durationMs": 12379
+    }
+  ]
+}

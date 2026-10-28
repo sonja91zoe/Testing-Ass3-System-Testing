@@ -1,0 +1,145 @@
+{
+  "startTime": "2026-10-26T16:11:10.030Z",
+  "endTime": "2026-10-26T16:12:36.783Z",
+  "userAgents": [
+    "Chrome 155.0.0.0 / Golden Gate 27"
+  ],
+  "passed": 9,
+  "total": 9,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "T010 Account registration",
+      "path": "/Users/xuyang/Development/xuyang-zhao-account-tests/tests/T010-registration.js",
+      "meta": {
+        "member": "D",
+        "tester": "Xuyang Zhao",
+        "function": "F10"
+      },
+      "tests": [
+        {
+          "name": "T010-S1 Register a new account",
+          "meta": {
+            "scenario": "T010-S1"
+          },
+          "errs": [],
+          "durationMs": 10325,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Development/xuyang-zhao-account-tests/reports/2026-10-26T16-11-01-874Z-member-D/screenshots/T010-S1.png",
+          "skipped": false
+        },
+        {
+          "name": "T010-S2 Reject missing first name",
+          "meta": {
+            "scenario": "T010-S2"
+          },
+          "errs": [],
+          "durationMs": 8156,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Development/xuyang-zhao-account-tests/reports/2026-10-26T16-11-01-874Z-member-D/screenshots/T010-S2.png",
+          "skipped": false
+        },
+        {
+          "name": "T010-S3 Reject mismatched password confirmation",
+          "meta": {
+            "scenario": "T010-S3"
+          },
+          "errs": [],
+          "durationMs": 8182,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Development/xuyang-zhao-account-tests/reports/2026-10-26T16-11-01-874Z-member-D/screenshots/T010-S3.png",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "T011 Account login",
+      "path": "/Users/xuyang/Development/xuyang-zhao-account-tests/tests/T011-login.js",
+      "meta": {
+        "member": "D",
+        "tester": "Xuyang Zhao",
+        "function": "F11"
+      },
+      "tests": [
+        {
+          "name": "T011-S1 Accept valid credentials",
+          "meta": {
+            "scenario": "T011-S1"
+          },
+          "errs": [],
+          "durationMs": 11377,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Development/xuyang-zhao-account-tests/reports/2026-10-26T16-11-01-874Z-member-D/screenshots/T011-S1.png",
+          "skipped": false
+        },
+        {
+          "name": "T011-S2 Reject an incorrect password",
+          "meta": {
+            "scenario": "T011-S2"
+          },
+          "errs": [],
+          "durationMs": 10727,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Development/xuyang-zhao-account-tests/reports/2026-10-26T16-11-01-874Z-member-D/screenshots/T011-S2.png",
+          "skipped": false
+        },
+        {
+          "name": "T011-S3 Reject blank credentials",
+          "meta": {
+            "scenario": "T011-S3"
+          },
+          "errs": [],
+          "durationMs": 4070,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Development/xuyang-zhao-account-tests/reports/2026-10-26T16-11-01-874Z-member-D/screenshots/T011-S3.png",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "T012 Account logout",
+      "path": "/Users/xuyang/Development/xuyang-zhao-account-tests/tests/T012-logout.js",
+      "meta": {
+        "member": "D",
+        "tester": "Xuyang Zhao",
+        "function": "F12"
+      },
+      "tests": [
+        {
+          "name": "T012-S1 End an authenticated session",
+          "meta": {
+            "scenario": "T012-S1"
+          },
+          "errs": [],
+          "durationMs": 10965,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Development/xuyang-zhao-account-tests/reports/2026-10-26T16-11-01-874Z-member-D/screenshots/T012-S1.png",
+          "skipped": false
+        },
+        {
+          "name": "T012-S2 Deny protected profile access after logout",
+          "meta": {
+            "scenario": "T012-S2"
+          },
+          "errs": [],
+          "durationMs": 7725,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Development/xuyang-zhao-account-tests/reports/2026-10-26T16-11-01-874Z-member-D/screenshots/T012-S2.png",
+          "skipped": false
+        },
+        {
+          "name": "T012-S3 Allow a new login and another logout",
+          "meta": {
+            "scenario": "T012-S3"
+          },
+          "errs": [],
+          "durationMs": 12672,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Development/xuyang-zhao-account-tests/reports/2026-10-26T16-11-01-874Z-member-D/screenshots/T012-S3.png",
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

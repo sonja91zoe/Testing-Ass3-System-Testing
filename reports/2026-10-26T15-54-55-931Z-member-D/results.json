@@ -1,0 +1,157 @@
+{
+  "startTime": "2026-10-26T15:55:03.883Z",
+  "endTime": "2026-10-26T15:57:57.916Z",
+  "userAgents": [
+    "Chrome 155.0.0.0 / Golden Gate 27"
+  ],
+  "passed": 3,
+  "total": 9,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "T010 Account registration",
+      "path": "/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/tests/T010-registration.js",
+      "meta": {
+        "member": "D",
+        "tester": "Xuyang Zhao",
+        "function": "F10"
+      },
+      "tests": [
+        {
+          "name": "T010-S1 Register a new account",
+          "meta": {
+            "scenario": "T010-S1"
+          },
+          "errs": [
+            "AssertionError: expected 'Account\\n\\nCongratulations! Your new account has been successfully created!\\n\\nYou can now take advantage of member privileges to enhance your online shopping experience with us.\\n\\nIf you have ANY questions about the operation of this online shop, please e-mail the store owner.\\n\\nA confirmation has been sent to the provided e-mail address. If you have not received it within the hour, please contact us.\\n\\nContinue' to include 'Your Account Has Been Created!'\n\nBrowser: Chrome 155.0.0.0 / Golden Gate 27\nScreenshot: /Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/2026-10-27_02-55-02/test-1/Chrome_155.0.0.0_Golden_Gate_27/errors/1.png\n\n   39 |export async function createSeed(t) {\n   40 |    await t.navigateTo(route('register'));\n   41 |    await fillRegistration(t);\n   42 |    await t.click(registerButton)\n   43 |        .expect(currentRoute()).eql('account/success')\n > 44 |        .expect(content.innerText).contains('Your Account Has Been Created!');\n   45 |    seedCreated = true;\n   46 |}\n   47 |\n   48 |export async function login(t, password = account.password) {\n   49 |    await t.navigateTo(route('login'))\n\n   at <anonymous> (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:44:36)\n   at asyncGeneratorStep (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:2:29)\n   at _next (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:2:29)"
+          ],
+          "durationMs": 26009,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/2026-10-27_02-55-02/test-1/Chrome_155.0.0.0_Golden_Gate_27/errors/1.png",
+          "skipped": false
+        },
+        {
+          "name": "T010-S2 Reject missing first name",
+          "meta": {
+            "scenario": "T010-S2"
+          },
+          "errs": [],
+          "durationMs": 8267,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/T010-S2.png",
+          "skipped": false
+        },
+        {
+          "name": "T010-S3 Reject mismatched password confirmation",
+          "meta": {
+            "scenario": "T010-S3"
+          },
+          "errs": [],
+          "durationMs": 8658,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/T010-S3.png",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "T011 Account login",
+      "path": "/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/tests/T011-login.js",
+      "meta": {
+        "member": "D",
+        "tester": "Xuyang Zhao",
+        "function": "F11"
+      },
+      "tests": [
+        {
+          "name": "T011-S1 Accept valid credentials",
+          "meta": {
+            "scenario": "T011-S1"
+          },
+          "errs": [
+            "AssertionError: expected 'account/register' to deeply equal 'account/success'\n\n+ expected - actual\n\n-account/register\n+account/success\n\n\nBrowser: Chrome 155.0.0.0 / Golden Gate 27\nScreenshot: /Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/2026-10-27_02-55-02/test-4/Chrome_155.0.0.0_Golden_Gate_27/errors/1.png\n\n   38 |\n   39 |export async function createSeed(t) {\n   40 |    await t.navigateTo(route('register'));\n   41 |    await fillRegistration(t);\n   42 |    await t.click(registerButton)\n > 43 |        .expect(currentRoute()).eql('account/success')\n   44 |        .expect(content.innerText).contains('Your Account Has Been Created!');\n   45 |    seedCreated = true;\n   46 |}\n   47 |\n   48 |export async function login(t, password = account.password) {\n\n   at <anonymous> (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:43:33)\n   at asyncGeneratorStep (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:2:29)\n   at _next (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:2:29)"
+          ],
+          "durationMs": 25322,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/2026-10-27_02-55-02/test-4/Chrome_155.0.0.0_Golden_Gate_27/errors/1.png",
+          "skipped": false
+        },
+        {
+          "name": "T011-S2 Reject an incorrect password",
+          "meta": {
+            "scenario": "T011-S2"
+          },
+          "errs": [
+            "AssertionError: expected 'account/register' to deeply equal 'account/success'\n\n+ expected - actual\n\n-account/register\n+account/success\n\n\nBrowser: Chrome 155.0.0.0 / Golden Gate 27\nScreenshot: /Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/2026-10-27_02-55-02/test-5/Chrome_155.0.0.0_Golden_Gate_27/errors/1.png\n\n   38 |\n   39 |export async function createSeed(t) {\n   40 |    await t.navigateTo(route('register'));\n   41 |    await fillRegistration(t);\n   42 |    await t.click(registerButton)\n > 43 |        .expect(currentRoute()).eql('account/success')\n   44 |        .expect(content.innerText).contains('Your Account Has Been Created!');\n   45 |    seedCreated = true;\n   46 |}\n   47 |\n   48 |export async function login(t, password = account.password) {\n\n   at <anonymous> (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:43:33)\n   at asyncGeneratorStep (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:2:29)\n   at _next (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:2:29)"
+          ],
+          "durationMs": 24716,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/2026-10-27_02-55-02/test-5/Chrome_155.0.0.0_Golden_Gate_27/errors/1.png",
+          "skipped": false
+        },
+        {
+          "name": "T011-S3 Reject blank credentials",
+          "meta": {
+            "scenario": "T011-S3"
+          },
+          "errs": [],
+          "durationMs": 4242,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/T011-S3.png",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "T012 Account logout",
+      "path": "/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/tests/T012-logout.js",
+      "meta": {
+        "member": "D",
+        "tester": "Xuyang Zhao",
+        "function": "F12"
+      },
+      "tests": [
+        {
+          "name": "T012-S1 End an authenticated session",
+          "meta": {
+            "scenario": "T012-S1"
+          },
+          "errs": [
+            "AssertionError: expected 'account/register' to deeply equal 'account/success'\n\n+ expected - actual\n\n-account/register\n+account/success\n\n\nBrowser: Chrome 155.0.0.0 / Golden Gate 27\nScreenshot: /Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/2026-10-27_02-55-02/test-7/Chrome_155.0.0.0_Golden_Gate_27/errors/1.png\n\n   38 |\n   39 |export async function createSeed(t) {\n   40 |    await t.navigateTo(route('register'));\n   41 |    await fillRegistration(t);\n   42 |    await t.click(registerButton)\n > 43 |        .expect(currentRoute()).eql('account/success')\n   44 |        .expect(content.innerText).contains('Your Account Has Been Created!');\n   45 |    seedCreated = true;\n   46 |}\n   47 |\n   48 |export async function login(t, password = account.password) {\n\n   at <anonymous> (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:43:33)\n   at asyncGeneratorStep (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:2:29)\n   at _next (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:2:29)"
+          ],
+          "durationMs": 24152,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/2026-10-27_02-55-02/test-7/Chrome_155.0.0.0_Golden_Gate_27/errors/1.png",
+          "skipped": false
+        },
+        {
+          "name": "T012-S2 Deny protected profile access after logout",
+          "meta": {
+            "scenario": "T012-S2"
+          },
+          "errs": [
+            "AssertionError: expected 'account/register' to deeply equal 'account/success'\n\n+ expected - actual\n\n-account/register\n+account/success\n\n\nBrowser: Chrome 155.0.0.0 / Golden Gate 27\nScreenshot: /Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/2026-10-27_02-55-02/test-8/Chrome_155.0.0.0_Golden_Gate_27/errors/1.png\n\n   38 |\n   39 |export async function createSeed(t) {\n   40 |    await t.navigateTo(route('register'));\n   41 |    await fillRegistration(t);\n   42 |    await t.click(registerButton)\n > 43 |        .expect(currentRoute()).eql('account/success')\n   44 |        .expect(content.innerText).contains('Your Account Has Been Created!');\n   45 |    seedCreated = true;\n   46 |}\n   47 |\n   48 |export async function login(t, password = account.password) {\n\n   at <anonymous> (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:43:33)\n   at asyncGeneratorStep (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:2:29)\n   at _next (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:2:29)"
+          ],
+          "durationMs": 25100,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/2026-10-27_02-55-02/test-8/Chrome_155.0.0.0_Golden_Gate_27/errors/1.png",
+          "skipped": false
+        },
+        {
+          "name": "T012-S3 Allow a new login and another logout",
+          "meta": {
+            "scenario": "T012-S3"
+          },
+          "errs": [
+            "AssertionError: expected 'account/register' to deeply equal 'account/success'\n\n+ expected - actual\n\n-account/register\n+account/success\n\n\nBrowser: Chrome 155.0.0.0 / Golden Gate 27\nScreenshot: /Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/2026-10-27_02-55-02/test-9/Chrome_155.0.0.0_Golden_Gate_27/errors/1.png\n\n   38 |\n   39 |export async function createSeed(t) {\n   40 |    await t.navigateTo(route('register'));\n   41 |    await fillRegistration(t);\n   42 |    await t.click(registerButton)\n > 43 |        .expect(currentRoute()).eql('account/success')\n   44 |        .expect(content.innerText).contains('Your Account Has Been Created!');\n   45 |    seedCreated = true;\n   46 |}\n   47 |\n   48 |export async function login(t, password = account.password) {\n\n   at <anonymous> (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:43:33)\n   at asyncGeneratorStep (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:2:29)\n   at _next (/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/helpers/account.js:2:29)"
+          ],
+          "durationMs": 24886,
+          "unstable": false,
+          "screenshotPath": "/Users/xuyang/Documents/Codex/2026-10-24/testcafe-github-ecommerce-playground-lambdatest-io-3/outputs/xuyang-zhao-account-tests/reports/2026-10-26T15-54-55-931Z-member-D/screenshots/2026-10-27_02-55-02/test-9/Chrome_155.0.0.0_Golden_Gate_27/errors/1.png",
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

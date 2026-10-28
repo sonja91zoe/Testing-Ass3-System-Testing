@@ -1,0 +1,99 @@
+{
+  "tester": "Xuyang Zhao",
+  "planned": 9,
+  "run": "2026-10-26T15-58-40-029Z-member-D",
+  "startTime": "2026-10-26T15:58:47.939Z",
+  "endTime": "2026-10-26T16:00:14.836Z",
+  "userAgents": [
+    "Chrome 155.0.0.0 / Golden Gate 27"
+  ],
+  "counts": {
+    "PASS": 9,
+    "FAIL": 0,
+    "ERROR": 0,
+    "SKIP": 0
+  },
+  "scenarios": [
+    {
+      "id": "T010-S1",
+      "case": "T010",
+      "name": "T010-S1 Register a new account",
+      "status": "PASS",
+      "errors": "",
+      "screenshot": "reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T010-S1.png",
+      "durationMs": 10485
+    },
+    {
+      "id": "T010-S2",
+      "case": "T010",
+      "name": "T010-S2 Reject missing first name",
+      "status": "PASS",
+      "errors": "",
+      "screenshot": "reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T010-S2.png",
+      "durationMs": 8538
+    },
+    {
+      "id": "T010-S3",
+      "case": "T010",
+      "name": "T010-S3 Reject mismatched password confirmation",
+      "status": "PASS",
+      "errors": "",
+      "screenshot": "reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T010-S3.png",
+      "durationMs": 8306
+    },
+    {
+      "id": "T011-S1",
+      "case": "T011",
+      "name": "T011-S1 Accept valid credentials",
+      "status": "PASS",
+      "errors": "",
+      "screenshot": "reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T011-S1.png",
+      "durationMs": 11671
+    },
+    {
+      "id": "T011-S2",
+      "case": "T011",
+      "name": "T011-S2 Reject an incorrect password",
+      "status": "PASS",
+      "errors": "",
+      "screenshot": "reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T011-S2.png",
+      "durationMs": 10311
+    },
+    {
+      "id": "T011-S3",
+      "case": "T011",
+      "name": "T011-S3 Reject blank credentials",
+      "status": "PASS",
+      "errors": "",
+      "screenshot": "reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T011-S3.png",
+      "durationMs": 4107
+    },
+    {
+      "id": "T012-S1",
+      "case": "T012",
+      "name": "T012-S1 End an authenticated session",
+      "status": "PASS",
+      "errors": "",
+      "screenshot": "reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T012-S1.png",
+      "durationMs": 10565
+    },
+    {
+      "id": "T012-S2",
+      "case": "T012",
+      "name": "T012-S2 Deny protected profile access after logout",
+      "status": "PASS",
+      "errors": "",
+      "screenshot": "reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T012-S2.png",
+      "durationMs": 7878
+    },
+    {
+      "id": "T012-S3",
+      "case": "T012",
+      "name": "T012-S3 Allow a new login and another logout",
+      "status": "PASS",
+      "errors": "",
+      "screenshot": "reports/2026-10-26T15-58-40-029Z-member-D/screenshots/T012-S3.png",
+      "durationMs": 12379
+    }
+  ]
+}
