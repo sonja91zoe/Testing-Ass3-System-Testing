@@ -4,7 +4,8 @@
   "private": true,
   "description": "Registration, login and logout system tests assigned to Xuyang Zhao",
   "scripts": {
-    "test": "node scripts/run.cjs"
+    "test": "node scripts/run.cjs",
+    "test:aimee": "node scripts/run-aimee.cjs"
   },
   "devDependencies": {
     "testcafe": "3.7.6"
