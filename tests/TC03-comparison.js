@@ -1,6 +1,6 @@
 // Author: Aimee Tai-Yun Shih | F03 Product comparison | TC03
 import { Selector } from 'testcafe';
-import { searchUrl, addCompare, openCompare, expectCompared, screenshot } from '../../helpers/catalogue-aimee';
+import { searchUrl, addCompare, openCompare, expectCompared, screenshot } from '../helpers/catalogue-aimee';
 fixture('Aimee TC03 Product comparison').page(searchUrl)
     .meta({ tester: 'Aimee Tai-Yun Shih', member: 'Aimee', function: 'F03' })
     .beforeEach(async t => { await t.expect(Selector('#compare-total').innerText).contains('(0)'); });

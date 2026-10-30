@@ -8,23 +8,23 @@ Install Node.js and Google Chrome. Open a terminal in the repository folder:
 
 ```sh
 npm ci
-npm run test:aimee
+npm test
 ```
 
-Default: real headless Chrome. For visible Chrome on macOS/Linux:
+Default: visible Chrome. For headless Chrome on macOS/Linux:
 
 ```sh
-BROWSER=chrome npm run test:aimee
+BROWSER=chrome:headless npm test
 ```
 
 PowerShell:
 
 ```powershell
-$env:BROWSER = 'chrome'
-npm run test:aimee
+$env:BROWSER = 'chrome:headless'
+npm test
 ```
 
-The existing `npm test` still runs Xuyang Zhao's account cases. Aimee's files are deliberately in `tests/aimee/`, outside that runner's `tests/*.js` glob, to preserve attribution. Do not use the account runner to produce Aimee evidence.
+`npm test` now runs all six cases (eighteen scenarios) through one shared runner. All six files are in `tests/`; the runner also discovers future nested test files. Fixture metadata preserves each tester's attribution.
 
 ## Ownership and coverage
 
@@ -36,7 +36,7 @@ All nine tests start with TestCafe's fresh browser state. Comparison additionall
 
 ## Evidence
 
-Every attempt creates `reports/<UTC-timestamp>-aimee/`, containing source snapshots and, when execution completes, original `results.json`, screenshots and `run-info.json`. Startup failures produce `fatal-error.txt`. Failed attempts are retained. The report must use actual results from an identified run; do not infer PASS from the presence of a screenshot.
+Every attempt creates `reports/<UTC-timestamp>-all/`, containing source snapshots and, when execution completes, original `results.json`, screenshots and `run-info.json`. Startup failures produce `fatal-error.txt`. Failed attempts are retained. The report must use actual results from an identified run; do not infer PASS from the presence of a screenshot.
 
 ## 中文使用說明
 
@@ -53,7 +53,6 @@ Implementation and document preparation were AI-assisted in this chat. Relevant 
 
 ## Latest execution — 30 October 2026
 
-Final recorded run: [2026-10-30T11-18-43-609Z-aimee](../reports/2026-10-30T11-18-43-609Z-aimee/results.json), executed by Aimee in Chrome 156 / macOS Tahoe 26. Nine scenarios completed: eight passed and one failed (88.9% scenario pass rate). TC01-S02 repeatedly displayed “Your shopping cart is empty!” for an empty search result. The expected exact no-match sentence is a test expectation, not a supplied formal website requirement; the misleading cart message is recorded as a candidate usability/content defect.
+Final recorded run: [2026-10-30T11-18-43-609Z-aimee](https://github.com/sonja91zoe/Testing-Ass3-System-Testing/tree/92e9dcb/reports/2026-10-30T11-18-43-609Z-aimee/results.json), executed by Aimee in Chrome 156 / macOS Tahoe 26. Nine scenarios completed: eight passed and one failed (88.9% scenario pass rate). TC01-S02 repeatedly displayed “Your shopping cart is empty!” for an empty search result. The expected exact no-match sentence is a test expectation, not a supplied formal website requirement; the misleading cart message is recorded as a candidate usability/content defect.
 
 The preceding run 2026-10-30T11-17-37-232Z-aimee also recorded eight passes and the same failure. Run 2026-10-30T11-16-12-601Z-aimee additionally failed TC03-S01 because navigation remained on Search - Mac; the next two runs passed that scenario. Its intermittent navigation behaviour remains unexplained and is not hidden by the latest result. Earlier assertion-chaining errors were corrected before these runs. Original evidence is retained; results apply to these executions only.
-

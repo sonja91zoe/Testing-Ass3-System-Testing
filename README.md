@@ -30,28 +30,28 @@ Install Node.js and Google Chrome, open this directory, run `npm install`, then 
 
 You can also double-click `Run_TestCafe.command`. macOS may request TestCafe Browser Tools screen recording or browser automation access.
 
-## Run Aimee's tests
+## Run all tests
 
 After installing dependencies, run:
 
 ```sh
-npm run test:aimee
+npm test
 ```
 
 If Node.js is available without npm and dependencies are already installed:
 
 ```sh
-node scripts/run-aimee.cjs
+node scripts/run.cjs
 ```
 
-The default is headless Chrome. `npm test` retains the existing account-test runner. Aimee's independent runner saves timestamped JSON, screenshots and source snapshots under `reports/`.
+The shared runner opens Chrome and runs every test under `tests/`, including subfolders. Currently there are six cases and eighteen scenarios from Aimee and Xuyang. Set `BROWSER=chrome:headless` for headless execution. Results, screenshots and source snapshots are saved under `reports/<timestamp>-all/`; fixture metadata identifies each tester.
 
 ## Aimee results and documentation
 
 The final recorded run on 30 October 2026 completed all nine scenarios: **8 passed, 1 failed (88.9%)**. TC01-S02 found that an empty search displays a shopping-cart message. The previous run produced the same result. An earlier comparison-navigation failure is retained in the report discussion. These are Aimee's results, not an overall group completion claim.
 
-- [Execution results](reports/2026-10-30T11-18-43-609Z-aimee/results.json)
-- [Screenshots](reports/2026-10-30T11-18-43-609Z-aimee/screenshots)
+- [Execution results](https://github.com/sonja91zoe/Testing-Ass3-System-Testing/tree/92e9dcb/reports/2026-10-30T11-18-43-609Z-aimee/results.json)
+- [Screenshots](https://github.com/sonja91zoe/Testing-Ass3-System-Testing/tree/92e9dcb/reports/2026-10-30T11-18-43-609Z-aimee/screenshots)
 - [Empty-search finding](docs/aimee-empty-search-finding.md)
 - [English report contribution](docs/aimee-report-contribution.md)
 - [Execution guide with Chinese notes](docs/aimee-guide.md)

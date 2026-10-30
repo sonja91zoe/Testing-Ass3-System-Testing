@@ -36,13 +36,13 @@ Implementation: JavaScript with TestCafe 3.7.6. Each scenario starts with TestCa
 
 ## Latest execution — 30 October 2026
 
-Final recorded run: [2026-10-30T11-18-43-609Z-aimee](../reports/2026-10-30T11-18-43-609Z-aimee/results.json), executed by Aimee in Chrome 156 / macOS Tahoe 26. Nine scenarios completed: eight passed and one failed (88.9% scenario pass rate). TC01-S02 repeatedly displayed “Your shopping cart is empty!” for an empty search result. The expected exact no-match sentence is a test expectation, not a supplied formal website requirement; the misleading cart message is recorded as a candidate usability/content defect.
+Final recorded run: [2026-10-30T11-18-43-609Z-aimee](https://github.com/sonja91zoe/Testing-Ass3-System-Testing/tree/92e9dcb/reports/2026-10-30T11-18-43-609Z-aimee/results.json), executed by Aimee in Chrome 156 / macOS Tahoe 26. Nine scenarios completed: eight passed and one failed (88.9% scenario pass rate). TC01-S02 repeatedly displayed “Your shopping cart is empty!” for an empty search result. The expected exact no-match sentence is a test expectation, not a supplied formal website requirement; the misleading cart message is recorded as a candidate usability/content defect.
 
 The preceding run 2026-10-30T11-17-37-232Z-aimee also recorded eight passes and the same failure. Run 2026-10-30T11-16-12-601Z-aimee additionally failed TC03-S01 because navigation remained on Search - Mac; the next two runs passed that scenario. Its intermittent navigation behaviour remains unexplained and is not hidden by the latest result. Earlier assertion-chaining errors were corrected before these runs. Original evidence is retained; results apply to these executions only.
 
 ### Reproduction and assistance
 
-Follow docs/aimee-guide.md and run npm run test:aimee. Record the actual browser, operating system and Node.js versions used for the final run. AI assisted with initial code and this draft; Aimee must review and understand the implementation and retain the prompts required by the assignment.
+Follow docs/aimee-guide.md and run npm test. Record the actual browser, operating system and Node.js versions used for the final run. AI assisted with initial code and this draft; Aimee must review and understand the implementation and retain the prompts required by the assignment.
 
 ### Integration remaining
 

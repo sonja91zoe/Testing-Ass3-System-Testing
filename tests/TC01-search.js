@@ -1,6 +1,6 @@
 // Author: Aimee Tai-Yun Shih | F01 Product search | TC01
 import { Selector } from 'testcafe';
-import { BASE, cards, names, search, screenshot, url } from '../../helpers/catalogue-aimee';
+import { BASE, cards, names, search, screenshot, url } from '../helpers/catalogue-aimee';
 fixture('Aimee TC01 Product search').page(BASE).meta({ tester: 'Aimee Tai-Yun Shih', member: 'Aimee', function: 'F01' });
 test.meta({ scenario: 'TC01-S01' })('TC01-S01 Find MacBook products', async t => {
     await search(t, 'MacBook');

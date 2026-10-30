@@ -12,7 +12,7 @@ const scenarios = report.fixtures.flatMap(f => f.tests.map(t => {
     const errorShot = text.match(/Screenshot: ([^\n]+)/);
     const successShot = path.join(path.dirname(input), 'screenshots', t.name.split(' ')[0] + '.png');
     return {
-        fixture: f.name, scenario: t.name.split(' ')[0], name: t.name, status,
+        fixture: f.name, tester: f.meta?.tester || null, member: f.meta?.member || null, scenario: t.name.split(' ')[0], name: t.name, status,
         errors, screenshot: fs.existsSync(successShot) ? successShot : errorShot ? errorShot[1].trim() : null,
         durationMs: t.durationMs
     };
@@ -20,7 +20,7 @@ const scenarios = report.fixtures.flatMap(f => f.tests.map(t => {
 const out = path.join(path.dirname(input), 'summary.json');
 const statusCount = status => scenarios.filter(s => s.status === status).length;
 fs.writeFileSync(out, JSON.stringify({
-    planned: JSON.parse(fs.readFileSync(path.resolve(__dirname, '../test-plan.json'), 'utf8')).cases.length * 3,
+    planned: report.total,
     executed: scenarios.filter(s => s.status !== 'skipped').length,
     passed: statusCount('passed'), failed: statusCount('failed'), errors: statusCount('error'),
     skipped: statusCount('skipped'), reporterNonPass: scenarios.filter(s => ['failed', 'error'].includes(s.status)).length,

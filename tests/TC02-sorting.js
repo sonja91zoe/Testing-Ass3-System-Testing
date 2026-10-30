@@ -1,6 +1,6 @@
 // Author: Aimee Tai-Yun Shih | F02 Product sorting | TC02
 import { Selector, ClientFunction } from 'testcafe';
-import { searchUrl, cards, names, screenshot, url } from '../../helpers/catalogue-aimee';
+import { searchUrl, cards, names, screenshot, url } from '../helpers/catalogue-aimee';
 const prices = ClientFunction(() => Array.from(document.querySelectorAll('#content .product-layout .price')).map(e => {
     const sale = e.querySelector('.price-new');
     const text = sale ? sale.textContent : e.firstChild.textContent;

@@ -1,11 +1,10 @@
 {
-  "name": "assignment3-xuyang-zhao-account-tests",
+  "name": "assignment3-system-tests",
   "version": "1.0.0",
   "private": true,
-  "description": "Registration, login and logout system tests assigned to Xuyang Zhao",
+  "description": "Group system tests for the OpenCart demonstration store",
   "scripts": {
-    "test": "node scripts/run.cjs",
-    "test:aimee": "node scripts/run-aimee.cjs"
+    "test": "node scripts/run.cjs"
   },
   "devDependencies": {
     "testcafe": "3.7.6"

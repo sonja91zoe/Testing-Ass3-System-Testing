@@ -4,10 +4,9 @@ const path = require('path');
 
 // Run from the project directory even when called with an absolute script path.
 process.chdir(path.resolve(__dirname, '..'));
-const member = 'D';
 process.env.ACCOUNT_RUN_ID = `${Date.now()}-${require('crypto').randomBytes(4).toString('hex')}`;
 const stamp = new Date().toISOString().replace(/[:.]/g, '-');
-const out = path.resolve('reports', `${stamp}${member ? '-member-' + member : '-all'}`);
+const out = path.resolve('reports', `${stamp}-all`);
 fs.mkdirSync(out, { recursive: true });
 // Retain the exact source associated with each run for audit and failure diagnosis.
 for (const folder of ['tests', 'helpers', 'scripts'])
@@ -19,7 +18,7 @@ for (const file of ['package.json', 'pnpm-lock.yaml', 'test-plan.json', 'README.
     try {
         cafe = await createTestCafe('127.0.0.1');
         const runner = cafe.createRunner()
-            .src('tests/*.js')
+            .src('tests/**/*.js')
             .browsers(process.env.BROWSER || 'chrome')
             .reporter([{ name: 'spec' }, { name: 'json', output: path.join(out, 'results.json') }])
             .screenshots({ path: path.join(out, 'screenshots'), takeOnFails: true, fullPage: true });
@@ -31,11 +30,11 @@ for (const file of ['package.json', 'pnpm-lock.yaml', 'test-plan.json', 'README.
             stopOnFirstFail: false, skipJsErrors: false
         });
         fs.writeFileSync(path.join(out, 'run-info.json'), JSON.stringify({
-            started: stamp, finished: new Date().toISOString(), member: member || 'all', failures,
+            started: stamp, finished: new Date().toISOString(), member: 'all', failures,
             baseUrl: process.env.BASE_URL || 'https://opencart.abstracta.us/',
             node: process.version, platform: process.platform, architecture: process.arch,
             testcafe: require('testcafe/package.json').version,
-            browser: process.env.BROWSER || 'chrome', mode: 'real browser; no request mocks', tester: 'Xuyang Zhao',
+            browser: process.env.BROWSER || 'chrome', mode: 'real browser; no request mocks', attribution: 'See fixture metadata in results.json',
             generatedEmail: `a3.xuyang.${process.env.ACCOUNT_RUN_ID}@example.invalid`
         }, null, 2));
         console.log(`Evidence directory: ${out}`);
