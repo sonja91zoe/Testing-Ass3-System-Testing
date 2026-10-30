@@ -1,0 +1,1 @@
+Error: EPERM: operation not permitted, mkdir '/Users/Aimee/.testcafe-browser-tools'

@@ -1,0 +1,147 @@
+{
+  "startTime": "2026-10-30T11:17:42.335Z",
+  "endTime": "2026-10-30T11:18:42.959Z",
+  "userAgents": [
+    "Chrome 156.0.0.0 / Tahoe 26"
+  ],
+  "passed": 8,
+  "total": 9,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "Aimee TC01 Product search",
+      "path": "/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/tests/aimee/TC01-search.js",
+      "meta": {
+        "tester": "Aimee Tai-Yun Shih",
+        "member": "Aimee",
+        "function": "F01"
+      },
+      "tests": [
+        {
+          "name": "TC01-S01 Find MacBook products",
+          "meta": {
+            "scenario": "TC01-S01"
+          },
+          "errs": [],
+          "durationMs": 8585,
+          "unstable": false,
+          "screenshotPath": "/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/reports/2026-10-30T11-17-37-232Z-aimee/screenshots",
+          "skipped": false
+        },
+        {
+          "name": "TC01-S02 Show an empty result for an unknown keyword",
+          "meta": {
+            "scenario": "TC01-S02"
+          },
+          "errs": [
+            "AssertionError: expected 'Search - AimeeNoSuchProduct739281\\nSearch Criteria\\nCategories\\nDesktops\\n      PC\\n      Mac\\nLaptops & Notebooks\\n      Macs\\n      Windows\\nComponents\\n      Mice and Trackballs\\n      Monitors\\n            test 1\\n            test 2\\n      Printers\\n      Scanners\\n      Web Cameras\\nTablets\\nSoftware\\nPhones & PDAs\\nCameras\\nMP3 Players\\n      test 11\\n      test 12\\n      test 15\\n      test 16\\n      test 17\\n      test 18\\n      test 19\\n      test 20\\n            test 25\\n      test 21\\n      test 22\\n      test 23\\n      test 24\\n      test 4\\n      test 5\\n      test 6\\n      test 7\\n      test 8\\n      test 9\\nSearch in subcategories\\n\\nSearch in product descriptions\\n\\nSearch\\n\\nYour shopping cart is empty!' to include 'There is no product that matches the search criteria.'\n\nBrowser: Chrome 156.0.0.0 / Tahoe 26\nScreenshot: /Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/reports/2026-10-30T11-17-37-232Z-aimee/screenshots/2026-10-30_22-17-41/test-2/Chrome_156.0.0.0_Tahoe_26/errors/1.png\n\n   13 |    await screenshot(t, 'TC01-S01-detail');\n   14 |});\n   15 |test.meta({ scenario: 'TC01-S02' })('TC01-S02 Show an empty result for an unknown keyword', async t => {\n   16 |    await search(t, 'AimeeNoSuchProduct739281');\n   17 |    await t.expect(cards.count).eql(0);\n > 18 |    await t.expect(Selector('#content').innerText).contains('There is no product that matches the search criteria.');\n   19 |    await screenshot(t, 'TC01-S02');\n   20 |});\n   21 |test.meta({ scenario: 'TC01-S03' })('TC01-S03 Replace MacBook results with iPhone results', async t => {\n   22 |    await search(t, 'MacBook');\n   23 |    await t.expect(cards.count).eql(3);\n\n   at <anonymous> (/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/tests/aimee/TC01-search.js:18:52)\n   at asyncGeneratorStep (/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/tests/aimee/TC01-search.js:3:93)\n   at _next (/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/tests/aimee/TC01-search.js:3:93)"
+          ],
+          "durationMs": 18990,
+          "unstable": false,
+          "screenshotPath": "/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/reports/2026-10-30T11-17-37-232Z-aimee/screenshots/2026-10-30_22-17-41/test-2/Chrome_156.0.0.0_Tahoe_26/errors/1.png",
+          "skipped": false
+        },
+        {
+          "name": "TC01-S03 Replace MacBook results with iPhone results",
+          "meta": {
+            "scenario": "TC01-S03"
+          },
+          "errs": [],
+          "durationMs": 5979,
+          "unstable": false,
+          "screenshotPath": "/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/reports/2026-10-30T11-17-37-232Z-aimee/screenshots/TC01-S03.png",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "Aimee TC02 Product sorting",
+      "path": "/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/tests/aimee/TC02-sorting.js",
+      "meta": {
+        "tester": "Aimee Tai-Yun Shih",
+        "member": "Aimee",
+        "function": "F02"
+      },
+      "tests": [
+        {
+          "name": "TC02-S01 Price (Low > High)",
+          "meta": {
+            "scenario": "TC02-S01"
+          },
+          "errs": [],
+          "durationMs": 3421,
+          "unstable": false,
+          "screenshotPath": "/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/reports/2026-10-30T11-17-37-232Z-aimee/screenshots/TC02-S01.png",
+          "skipped": false
+        },
+        {
+          "name": "TC02-S02 Price (High > Low)",
+          "meta": {
+            "scenario": "TC02-S02"
+          },
+          "errs": [],
+          "durationMs": 3335,
+          "unstable": false,
+          "screenshotPath": "/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/reports/2026-10-30T11-17-37-232Z-aimee/screenshots/TC02-S02.png",
+          "skipped": false
+        },
+        {
+          "name": "TC02-S03 Name (A - Z)",
+          "meta": {
+            "scenario": "TC02-S03"
+          },
+          "errs": [],
+          "durationMs": 3523,
+          "unstable": false,
+          "screenshotPath": "/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/reports/2026-10-30T11-17-37-232Z-aimee/screenshots/TC02-S03.png",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "name": "Aimee TC03 Product comparison",
+      "path": "/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/tests/aimee/TC03-comparison.js",
+      "meta": {
+        "tester": "Aimee Tai-Yun Shih",
+        "member": "Aimee",
+        "function": "F03"
+      },
+      "tests": [
+        {
+          "name": "TC03-S01 Compare one selected product",
+          "meta": {
+            "scenario": "TC03-S01"
+          },
+          "errs": [],
+          "durationMs": 4010,
+          "unstable": false,
+          "screenshotPath": "/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/reports/2026-10-30T11-17-37-232Z-aimee/screenshots/TC03-S01.png",
+          "skipped": false
+        },
+        {
+          "name": "TC03-S02 Compare two different products",
+          "meta": {
+            "scenario": "TC03-S02"
+          },
+          "errs": [],
+          "durationMs": 4769,
+          "unstable": false,
+          "screenshotPath": "/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/reports/2026-10-30T11-17-37-232Z-aimee/screenshots/TC03-S02.png",
+          "skipped": false
+        },
+        {
+          "name": "TC03-S03 Remove iMac and retain MacBook",
+          "meta": {
+            "scenario": "TC03-S03"
+          },
+          "errs": [],
+          "durationMs": 5533,
+          "unstable": false,
+          "screenshotPath": "/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/reports/2026-10-30T11-17-37-232Z-aimee/screenshots/TC03-S03.png",
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,14 @@
+{
+  "started": "2026-10-30T02:27:55.820Z",
+  "finished": "2026-10-30T02:29:19.520Z",
+  "tester": "Aimee Tai-Yun Shih",
+  "member": "Aimee",
+  "baseUrl": "https://opencart.abstracta.us/",
+  "node": "v24.22.1",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "testcafe": "3.7.6",
+  "browser": "chrome:headless",
+  "failures": 2,
+  "plannedScenarios": 9
+}

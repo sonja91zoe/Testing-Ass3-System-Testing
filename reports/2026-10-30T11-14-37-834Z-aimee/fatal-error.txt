@@ -1,0 +1,8 @@
+NativeBinaryHasFailedError: The find-window process failed with the 1 exit code.
+Process output:
+The application /Users/Aimee/.testcafe-browser-tools/TestCafe Browser Tools.app/Contents/MacOS/testcafe-browser-tools cannot be opened for an unexpected reason, error=Error Domain=NSOSStatusErrorDomain Code=-10826 "kLSNoLaunchPermissionErr: User doesn't have permission to launch the app (managed networks)"
+    at ChildProcess.<anonymous> (/Users/Aimee/Documents/Codex/2026-10-02/te/outputs/Testing-Ass3-System-Testing/node_modules/.pnpm/testcafe-browser-tools@2.0.26_supports-color@5.5.0/node_modules/testcafe-browser-tools/src/utils/exec.js:75:24)
+    at ChildProcess.emit (node:events:514:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:324:12)
+    at Process.callbackTrampoline (node:internal/async_hooks:131:17)
