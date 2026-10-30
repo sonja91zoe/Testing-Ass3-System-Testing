@@ -5,7 +5,7 @@
 
 - Aimee Tai-Yun Shih
 - Xuyang Zhao
-- Member 3
+- Zunyu Zhou
 
 ## Current Status
 
@@ -13,6 +13,8 @@
 - [x] Xuyang Zhao account test files and evidence uploaded.
 - [x] Aimee search, sorting and comparison tests implemented (three cases, nine scenarios).
 - [x] Aimee execution evidence recorded: **8 passed, 1 failed** in the final recorded run.
+- [x] Zunyu Zhou cart tests implemented (three cases, nine scenarios).
+- [x] Zunyu Zhou execution evidence recorded: **9 passed** in the final recorded run.
 - [ ] Review the empty-search feedback finding and intermittent comparison navigation observation.
 - [ ] Confirm the third member's deliverables and integrate the full group report.
 
@@ -23,6 +25,7 @@ Xuyang Zhao: T010 registration, T011 login, T012 logout
 
 Aimee Tai-Yun Shih: TC01 product search, TC02 product sorting, TC03 product comparison. Each case includes three scenarios.
 
+Zunyu Zhou: TC07 add to cart, TC08 update cart, TC09 remove cart. Each case includes three scenarios.
 
 ## Run
 
@@ -44,7 +47,7 @@ If Node.js is available without npm and dependencies are already installed:
 node scripts/run.cjs
 ```
 
-The shared runner opens Chrome and runs every test under `tests/`, including subfolders. Currently there are six cases and eighteen scenarios from Aimee and Xuyang. Set `BROWSER=chrome:headless` for headless execution. Results, screenshots and source snapshots are saved under `reports/<timestamp>-all/`; fixture metadata identifies each tester.
+The shared runner opens Chrome and runs every test under `tests/`, including subfolders. Currently there are nine cases and twenty-seven scenarios from Aimee, Xuyang and Zunyu. Set `BROWSER=chrome:headless` for headless execution. Results, screenshots and source snapshots are saved under `reports/<timestamp>-all/`; fixture metadata identifies each tester.
 
 ## Aimee results and documentation
 
