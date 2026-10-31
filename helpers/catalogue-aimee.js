@@ -1,5 +1,6 @@
 // Author: Aimee Tai-Yun Shih. Shared UI helpers for TC01–TC03.
 import { Selector, ClientFunction } from 'testcafe';
+import { waitForAnimations } from './ui';
 export const BASE = 'https://opencart.abstracta.us/';
 export const searchUrl = `${BASE}index.php?route=product/search&search=Mac`;
 export const cards = Selector('#content .product-layout');
@@ -16,6 +17,7 @@ export async function addCompare(t, name, count) {
     await t.expect(Selector('#compare-total').innerText).contains(`(${count})`);
 }
 export async function openCompare(t) {
+    await waitForAnimations(t);
     await t.click('#compare-total');
     await t.expect(Selector('#content h1').innerText).eql('Product Comparison');
 }
